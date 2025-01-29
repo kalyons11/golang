@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+// We can use var to declare variables
+var c, python, java bool
+
 func main() {
 	demo_funcs()
 	fmt.Println(add(1, 2))
@@ -10,6 +13,8 @@ func main() {
 	fmt.Println(swap(3, 4))
 	fmt.Println(swap2(1, 2))
 	fmt.Println(swap2(3, 4))
+	var x int
+	_ = x
 }
 
 func demo_funcs() {
