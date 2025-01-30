@@ -20,6 +20,11 @@ func main() {
 	fmt.Println(i, j, c, python, java)
 	var name = "John"
 	fmt.Println(name)
+
+	// The := syntax is shorthand for declaring and initializing a variable
+	// It is only available inside functions
+	k := 3
+	fmt.Println(k)
 }
 
 func demo_funcs() {
