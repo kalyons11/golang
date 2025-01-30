@@ -15,6 +15,11 @@ func main() {
 	fmt.Println(swap2(3, 4))
 	var x int
 	_ = x
+	var i, j int = 1, 2
+	var c, python, java = true, false, "no!"
+	fmt.Println(i, j, c, python, java)
+	var name = "John"
+	fmt.Println(name)
 }
 
 func demo_funcs() {
