@@ -1,9 +1,49 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 	show_types()
+	convert_types()
+}
+
+func convert_types() {
+	// Go is a statically typed language, so we need to convert types explicitly
+	var a int = 1
+	var b float64 = float64(a)
+	var c int = int(b)
+
+	fmt.Printf("a: %T\n", a)
+	fmt.Printf("b: %T\n", b)
+	fmt.Printf("c: %T\n", c)
+
+	// Go will not automatically convert types
+	// var d int = 1
+	// var e float64 = d // This will not compile
+
+	// We can also convert between complex types
+	var f complex64 = 1 + 1i
+	var g complex128 = complex128(f)
+
+	fmt.Printf("f: %T\n", f)
+	fmt.Printf("g: %T\n", g)
+
+	var x, y int = 3, 4
+	var res float64 = math.Sqrt(float64(x*x + y*y))
+	var z uint = uint(res)
+	fmt.Println(x, y, z)
+
+	// We can also use the short declaration operator
+	h := 1
+	i := float64(h)
+	j := int(i)
+
+	fmt.Printf("h: %T\n", h)
+	fmt.Printf("i: %T\n", i)
+	fmt.Printf("j: %T\n", j)
 }
 
 func show_types() {
