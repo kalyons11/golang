@@ -88,4 +88,32 @@ func show_types() {
 	fmt.Printf("i: %T\n", i)
 	fmt.Printf("j: %T\n", j)
 	fmt.Printf("k: %T\n", k)
+
+	// Constants are declared using the const keyword
+	const PI = 3.14159
+	const E = 2.71828
+	const G = 9.81
+	const truth = true
+
+	fmt.Printf("PI: %T\n", PI)
+	fmt.Printf("E: %T\n", E)
+	fmt.Printf("G: %T\n", G)
+	fmt.Printf("truth: %T\n", truth)
+
+	// Numeric constants
+	const (
+		Big   = 1 << 100
+		Small = Big >> 99
+	)
+
+	// fmt.Printf("Big: %T\n", Big) // This will not compile because of overflow
+	fmt.Printf("Small: %T, %v\n", Small, Small)
+	fmt.Printf("need_int(Small): %T, %v\n", need_int(Small), need_int(Small))
+	fmt.Printf("need_float(Small): %T, %v\n", need_float(Small), need_float(Small))
+	fmt.Printf("need_float(Big): %T, %v\n", need_float(Big), need_float(Big))
+	// fmt.Printf("need_int(Big): %T\n", need_int(Big)) // This will not compile because of overflow
 }
+
+func need_int(x int) int { return x*10 + 1 }
+
+func need_float(x float64) float64 { return x * 0.1 }
