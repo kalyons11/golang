@@ -1,2 +1,3 @@
 - https://go.dev/tour
 - Changes have been made to the code provided by the resource.
+- https://github.com/golang/tour/blob/master/LICENSE
