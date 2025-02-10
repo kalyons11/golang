@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 	show_for()
@@ -20,4 +23,14 @@ func show_for() {
 		sum += sum
 	}
 	fmt.Println(sum)
+
+	// Let's call our sqrt function
+	fmt.Println(sqrt(2), sqrt(-4)) // 1.4142135623730951 2i
+}
+
+func sqrt(x float64) string {
+	if x < 0 {
+		return sqrt(-x) + "i"
+	}
+	return fmt.Sprint(math.Sqrt(x))
 }
