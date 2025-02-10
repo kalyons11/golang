@@ -26,6 +26,12 @@ func show_for() {
 
 	// Let's call our sqrt function
 	fmt.Println(sqrt(2), sqrt(-4)) // 1.4142135623730951 2i
+
+	// We can use a short statement to declare variables in an if
+	// This variable is only available in the if block
+	if v := 9.0; v < 10 {
+		fmt.Println(v)
+	}
 }
 
 func sqrt(x float64) string {
