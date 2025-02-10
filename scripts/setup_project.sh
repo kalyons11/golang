@@ -34,6 +34,9 @@ func $FUNCTION_NAME() {
 }
 EOL
 
+# Open the file with VS Code
+code $PROJECT_NAME/main.go
+
 # Run the project
 ./run_go.sh $PROJECT_NAME
 
