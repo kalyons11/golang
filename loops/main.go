@@ -29,9 +29,14 @@ func show_for() {
 
 	// We can use a short statement to declare variables in an if
 	// This variable is only available in the if block
-	if v := 9.0; v < 10 {
+	if v := 11.0; v < 10 {
 		fmt.Println(v)
+	} else {
+		fmt.Println(v, "is greater than 10") // We can use v here
 	}
+
+	// We can't use v here
+	// fmt.Println(v)
 }
 
 func sqrt(x float64) string {
