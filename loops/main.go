@@ -9,6 +9,7 @@ func main() {
 func show_for() {
 	fmt.Println("Hello from show_for")
 
+	// For loops in golang have 3 parts: init, condition, post
 	for i := 0; i < 5; i++ {
 		fmt.Println(i)
 	}
