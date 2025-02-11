@@ -37,6 +37,11 @@ func show_for() {
 
 	// We can't use v here
 	// fmt.Println(v)
+
+	// Let's call our newton sqrt function and compare it to the math.Sqrt function
+	fmt.Println(sqrt_newton(2), math.Sqrt(2))
+	// Compute the difference between the two
+	fmt.Println(math.Abs(sqrt_newton(2) - math.Sqrt(2)))
 }
 
 func sqrt(x float64) string {
@@ -44,4 +49,17 @@ func sqrt(x float64) string {
 		return sqrt(-x) + "i"
 	}
 	return fmt.Sprint(math.Sqrt(x))
+}
+
+func sqrt_newton(x float64) float64 {
+	// Start with initial guess for z
+	z := 1.0
+
+	// Loop a max of 10 times
+	for i := 0; i < 10; i++ {
+		// Newton's method to update z
+		z -= (z*z - x) / (2 * z)
+	}
+
+	return z
 }
