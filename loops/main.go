@@ -17,6 +17,11 @@ func show_for() {
 	// This is useful for closing files, connections, etc.
 	defer fmt.Println("World (deferred).")
 
+	// Defers are pushed onto a stack and executed in a last-in-first-out order
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	} // This will print 9 to 0
+
 	// For loops in golang have 3 parts: init, condition, post
 	for i := 0; i < 5; i++ {
 		fmt.Println(i)
