@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"time"
 )
 
 func main() {
@@ -83,5 +84,16 @@ func show_switch(os string) {
 		fallthrough // This will print the next case as well
 	default:
 		fmt.Printf("%s. fallthrough.\n", os)
+	}
+
+	// We can use a switch with no condition to create a long if-else chain
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon.")
+	default:
+		fmt.Println("Good evening.")
 	}
 }
