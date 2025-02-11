@@ -13,6 +13,10 @@ func main() {
 func show_for() {
 	fmt.Println("Hello from show_for")
 
+	// We can use defer to ensure a function call is done at the end of the function
+	// This is useful for closing files, connections, etc.
+	defer fmt.Println("World (deferred).")
+
 	// For loops in golang have 3 parts: init, condition, post
 	for i := 0; i < 5; i++ {
 		fmt.Println(i)
