@@ -43,7 +43,7 @@ func show_for() {
 	// Compute the difference between the two
 	fmt.Println(math.Abs(sqrt_newton(2) - math.Sqrt(2)))
 
-	show_switch()
+	show_switch("linux")
 }
 
 func sqrt(x float64) string {
@@ -66,7 +66,7 @@ func sqrt_newton(x float64) float64 {
 	return z
 }
 
-func show_switch() {
+func show_switch(os string) {
 	fmt.Println("Hello from show_switch")
 
 	// Switch statements in golang are similar to other languages
@@ -75,7 +75,7 @@ func show_switch() {
 	// We can also use a switch with a condition and a fallthrough statement
 	// We can also use a switch with a condition and a default statement
 	// We can also use a switch with a condition and a default statement with a fallthrough statement
-	switch os := "linux"; os {
+	switch os {
 	case "darwin":
 		fmt.Println("OS X.")
 	case "linux":
