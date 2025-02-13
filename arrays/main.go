@@ -13,4 +13,8 @@ func show_arrays() {
 	a[0] = 1
 	a[1] = 2
 	fmt.Println(a) // [1 2]
+
+	// We can also declare and initialize an array in one line
+	var primes = [6]int{2, 3, 5, 7, 11, 13}
+	fmt.Println(primes)
 }
