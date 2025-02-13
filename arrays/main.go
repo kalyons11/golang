@@ -25,4 +25,37 @@ func show_arrays() {
 	// Slices are just references to arrays
 	s[0] = 100
 	fmt.Println(primes) // [2 100 5 7 11 13]
+
+	// We can define a slice literal, which is like an array literal without the length
+	var slice = []int{1, 2, 3, 4, 5}
+	fmt.Println(slice)
+
+	// We can use the make function to create a slice
+	var make_slice = make([]int, 5)
+	fmt.Println(make_slice)
+
+	// We can create a slice of structs
+	type Person struct {
+		Name string
+		Age  int
+	}
+	people := []Person{
+		{"Alice", 25},
+		{"Bob", 30},
+		{"Charlie", 35},
+	}
+	fmt.Println(people)
+
+	list := []struct {
+		i int
+		b bool
+	}{
+		{2, true},
+		{3, false},
+		{5, true},
+		{7, true},
+		{11, false},
+		{13, true},
+	}
+	fmt.Println(list)
 }
