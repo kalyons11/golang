@@ -21,4 +21,8 @@ func show_arrays() {
 	// We can create a slice from an array
 	var s []int = primes[1:4]
 	fmt.Println(s) // [3 5 7]
+
+	// Slices are just references to arrays
+	s[0] = 100
+	fmt.Println(primes) // [2 100 5 7 11 13]
 }
