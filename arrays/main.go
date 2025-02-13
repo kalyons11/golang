@@ -17,4 +17,8 @@ func show_arrays() {
 	// We can also declare and initialize an array in one line
 	var primes = [6]int{2, 3, 5, 7, 11, 13}
 	fmt.Println(primes)
+
+	// We can create a slice from an array
+	var s []int = primes[1:4]
+	fmt.Println(s) // [3 5 7]
 }
