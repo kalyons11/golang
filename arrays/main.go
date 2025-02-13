@@ -69,4 +69,15 @@ func show_arrays() {
 	// a[:10]
 	// a[0:]
 	// a[:]
+
+	test := []int{2, 3, 5, 7, 11, 13}
+
+	test = test[1:4]
+	fmt.Println(test)
+
+	test = test[:2]
+	fmt.Println(test)
+
+	test = test[1:]
+	fmt.Println(test)
 }
