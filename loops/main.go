@@ -8,6 +8,13 @@ import (
 
 func main() {
 	show_for()
+	show_range()
+}
+
+func show_range() {
+	for i, v := range []int{1, 2, 3} {
+		fmt.Printf("index %d: value %d\n", i, v)
+	}
 }
 
 func show_for() {
