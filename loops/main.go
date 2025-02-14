@@ -15,6 +15,17 @@ func show_range() {
 	for i, v := range []int{1, 2, 3} {
 		fmt.Printf("index %d: value %d\n", i, v)
 	}
+
+	// We can use _ to ignore the index or value
+	for _, v := range []int{1, 2, 3} {
+		fmt.Printf("value %d\n", v)
+	}
+
+	// We can use a map with range
+	m := map[string]int{"a": 1, "b": 2}
+	for k, v := range m {
+		fmt.Printf("key %s: value %d\n", k, v)
+	}
 }
 
 func show_for() {
