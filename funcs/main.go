@@ -22,6 +22,28 @@ func compute(fn func(float64, float64) float64) float64 {
 	return fn(3, 4)
 }
 
+// Go functions can be closures
+// A closure is a function value that references variables from outside its body
+// The function may access and assign to the referenced variables
+// In this sense, the function is "bound" to the variables
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+
+// We can write a closure for fibonacci
+// The fibonacci function returns a closure that returns successive fibonacci numbers
+func fibonacci() func() int {
+	a, b := 0, 1
+	return func() int {
+		a, b = b, a+b
+		return a
+	}
+}
+
 func main() {
 	demo_funcs()
 	fmt.Println(add(1, 2))
@@ -52,6 +74,16 @@ func main() {
 	fmt.Println(compute(func(x, y float64) float64 {
 		return x * y
 	})) // 12
+
+	pos, neg := adder(), adder()
+	for i := 0; i < 10; i++ {
+		fmt.Println(pos(i), neg(-2*i))
+	}
+
+	f := fibonacci()
+	for i := 0; i < 10; i++ {
+		fmt.Println(f())
+	}
 }
 
 func demo_funcs() {
