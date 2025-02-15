@@ -15,6 +15,7 @@ run_go() {
   pushd "$SOURCE_DIR" || { echo "Error: Failed to change directory to '$SOURCE_DIR'."; exit 1; }
 
   # Run the program, forwarding any additional command line arguments to the executable
+  go get .
   go mod init kevin/$SOURCE_DIR
   go run .
 

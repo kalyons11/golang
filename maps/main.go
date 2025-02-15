@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+
+	"golang.org/x/tour/wc"
+)
 
 type Vertex struct {
 	Lat, Long float64
@@ -8,8 +13,19 @@ type Vertex struct {
 
 var m map[string]Vertex // map[key_type]value_type
 
+func WordCount(s string) map[string]int {
+	// Use strings.fields to split the string into words
+	words := strings.Fields(s)
+	wordCount := make(map[string]int)
+	for _, word := range words {
+		wordCount[word]++
+	}
+	return wordCount
+}
+
 func main() {
 	run_maps()
+	wc.Test(WordCount)
 }
 
 func run_maps() {
