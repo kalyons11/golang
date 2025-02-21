@@ -45,6 +45,9 @@ func run_maps() {
 		"Google": {
 			37.42202, -122.08408,
 		},
+		"Apple": {
+			37.7749, -122.4194,
+		},
 	}
 	fmt.Println(n)
 
