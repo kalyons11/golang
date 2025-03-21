@@ -98,5 +98,6 @@ func run_maps() {
 
 	// We can also delete a key from a map of maps
 	delete(o["USA"], "California")
+	delete(o["India"], "Delhi")
 	fmt.Println(o)
 }
